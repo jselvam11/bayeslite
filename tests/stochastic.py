@@ -41,7 +41,7 @@ def stochastic(max_runs, min_passes):
             last_seed = None
             last_exc_info = None
             for i in xrange(max_runs):
-                seed = os.urandom(32)
+                #seed = os.urandom(32)
                 try:
                     value = f(seed)
                 except:

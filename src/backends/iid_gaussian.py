@@ -45,7 +45,7 @@ class StdNormalBackend(bayeslite.backend.BayesDB_Backend):
     """
 
     def __init__(self, seed=0):
-        self.prng = random.Random(seed)
+        #self.prng = random.Random(seed)
     def name(self): return 'std_normal'
     def register(self, bdb):
         with bdb.savepoint():

@@ -94,7 +94,7 @@ class NIGNormalBackend(bayeslite.backend.BayesDB_Backend):
 
     def __init__(self, hypers=(0, 1, 1, 1), seed=0):
         self.hypers = hypers
-        self.prng = random.Random(seed)
+        #self.prng = random.Random(seed)
 
     def name(self): return 'nig_normal'
 

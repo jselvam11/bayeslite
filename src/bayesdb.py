@@ -87,13 +87,13 @@ class BayesDB(object):
         self.sql_tracer = None
         self.temptable = 0
         self.qid = 0
-        if seed is None:
-            seed = struct.pack('<QQQQ', 0, 0, 0, 0)
-        self._prng = weakprng.weakprng(seed)
-        pyrseed = self._prng.weakrandom32()
-        self._py_prng = random.Random(pyrseed)
-        nprseed = [self._prng.weakrandom32() for _ in range(4)]
-        self._np_prng = numpy.random.RandomState(nprseed)
+        #if seed is None:
+        #    seed = struct.pack('<QQQQ', 0, 0, 0, 0)
+        #self._prng = weakprng.weakprng(seed)
+        #pyrseed = self._prng.weakrandom32()
+        #self._py_prng = random.Random(pyrseed)
+        #nprseed = [self._prng.weakrandom32() for _ in range(4)]
+        #self._np_prng = numpy.random.RandomState(nprseed)
 
         # Set up or check the permanent schema on disk.
         schema.bayesdb_install_schema(self, version=version,
